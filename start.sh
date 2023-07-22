@@ -35,6 +35,10 @@ mkdir /home/container/tmp
 cd /home/container/tmp
 wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.20.12.01.zip
 unzip bedrock-server-1.20.12.01.zip
+cp -l behavior_packs ..
+cp -l resource_packs ..
+cp -l definitions ..
+cp -l config ..
 cd ..
 claer
 echo '==============================='
