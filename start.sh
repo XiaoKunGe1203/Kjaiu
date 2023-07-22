@@ -1,11 +1,13 @@
-clear
+if [ -e "allowlist.json" ]
+    if [ -e "permissions.json" ]
+    clear
 echo '______  ___________            '
 echo '___   |/  /_  ____/___________ '
 echo '__  /|_/ /_  /    ___/ /___/ /_'
 echo '_  /  / / / /___  /_  __/_  __/'
-echo '/_/  /_/  \____/   /_/   /_/   #bulid2307221838'
+echo '/_/  /_/  \____/   /_/   /_/   #bulid2307221851'
 echo '
-输入bulid进入重新部署
+输入qing进入清空全部文件
 输入tools进入工具箱
 输入run启动服务器
 [container@mcpp ~]# '
@@ -13,33 +15,16 @@ echo '
 read -p "输入: " SOFTWARE </dev/tty
 
 case $SOFTWARE in
-bulid)
+qing)
 clear
-rm -rf /home/container/tmp
-clear
-echo '______  ___________            '
-echo '___   |/  /_  ____/___________ '
-echo '__  /|_/ /_  /    ___/ /___/ /_'
-echo '_  /  / / / /___  /_  __/_  __/'
-echo '/_/  /_/  \____/   /_/   /_/  
-开始进行部署工程'
-mkdir /home/container/tmp
-cd /home/container/tmp
-wget http://10.0.2.22/bedrock-server-1.20.12.01.zip
-unzip bedrock-server-1.20.12.01.zip
-cp -a allowlist.json ..
-cp -a permissions.json ..
-cp -a server.properties ..
-cd ..
-rm -rf tmp
-clear
+rm -rf /home/container/*
 echo '______  ___________            '
 echo '___   |/  /_  ____/___________ '
 echo '__  /|_/ /_  /    ___/ /___/ /_'
 echo '_  /  / / / /___  /_  __/_  __/'
 echo '/_/  /_/  \____/   /_/   /_/   '
 echo '==============================='
-echo '部署结束，请重新启动！'
+echo '任务结束，请重新启动！'
 echo '==============================='
 ;;
 tools)
@@ -61,7 +46,7 @@ echo '__  /|_/ /_  /    ___/ /___/ /_'
 echo '_  /  / / / /___  /_  __/_  __/'
 echo '/_/  /_/  \____/   /_/   /_/   '
 echo '==============================='
-echo '正在下载服务端'
+echo '正在获取最新服务端'
 echo '==============================='
 mkdir /home/container/tmp
 cd /home/container/tmp
@@ -119,3 +104,37 @@ exit
 ;;
 
 esac
+ 
+    else
+    rm -rf /home/container/tmp
+    clear
+    echo '______  ___________            '
+    echo '___   |/  /_  ____/___________ '
+    echo '__  /|_/ /_  /    ___/ /___/ /_'
+    echo '_  /  / / / /___  /_  __/_  __/'
+    echo '/_/  /_/  \____/   /_/   /_/  
+    开始进行部署工程'
+    mkdir /home/container/tmp
+    cd /home/container/tmp
+    wget http://10.0.2.22/bedrock-server-1.20.12.01.zip
+    unzip bedrock-server-1.20.12.01.zip
+    cp -a allowlist.json ..
+    cp -a permissions.json ..
+    cp -a server.properties ..
+    cd ..
+    rm -rf tmp
+    clear
+    echo '______  ___________            '
+    echo '___   |/  /_  ____/___________ '
+    echo '__  /|_/ /_  /    ___/ /___/ /_'
+    echo '_  /  / / / /___  /_  __/_  __/'
+    echo '/_/  /_/  \____/   /_/   /_/   '
+    echo '==============================='
+    echo '部署，请重新启动！'
+    echo '==============================='
+    fi
+else
+
+exit
+
+fi
