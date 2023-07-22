@@ -1,5 +1,7 @@
 if [ -e "allowlist.json" ]
+then
     if [ -e "permissions.json" ]
+    then
     clear
 echo '______  ___________            '
 echo '___   |/  /_  ____/___________ '
