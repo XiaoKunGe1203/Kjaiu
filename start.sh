@@ -1,5 +1,5 @@
 bnmb(){
-    echo '#bulid2307221954'
+    echo '#bulid2307222005'
 }
 oks(){
     clear
@@ -91,7 +91,7 @@ rm -rf /home/container/*
     unzip bedrock-server-1.20.12.01.zip
     rm -rf bedrock-server-1.20.12.01.zip bedrock_server_how_to.html
     mv bedrock_server start
-    wget http://10.0.2.22/bed/server.properties
+    wget -O server.properties http://10.0.2.22/bed/server.properties
     clear
     echo '______  ___________            '
     echo '___   |/  /_  ____/___________ '
