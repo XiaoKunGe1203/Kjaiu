@@ -1,5 +1,5 @@
 bnmb(){
-    echo '#bulid2307222005'
+    echo '#bulid2307221930'
 }
 oks(){
     clear
@@ -30,6 +30,28 @@ echo '具体还没写呢'
 
 run)
 clear
+rm -rf /home/container/tmp
+echo '______  ___________            '
+echo '___   |/  /_  ____/___________ '
+echo '__  /|_/ /_  /    ___/ /___/ /_'
+echo '_  /  / / / /___  /_  __/_  __/'
+echo '/_/  /_/  \____/   /_/   /_/   '
+echo '==============================='
+echo '正在获取最新服务端'
+echo '==============================='
+mkdir /home/container/tmp
+cd /home/container/tmp
+wget http://10.0.2.22/bedrock-server-1.20.12.01.zip
+unzip bedrock-server-1.20.12.01.zip
+rm -rf bedrock-server-1.20.12.01.zip
+cp -l -a behavior_packs ..
+cp -l -a resource_packs ..
+cp -l -a definitions ..
+cp -l -a config ..
+cp -l -a bedrock_server_symbols.debug ..
+
+
+
 cd /home/container/
 clear
 echo '==============================='
@@ -41,9 +63,10 @@ echo '__  /|_/ /_  /    ___/ /___/ /_'
 echo '_  /  / / / /___  /_  __/_  __/'
 echo '/_/  /_/  \____/   /_/   /_/   '
 bnmb
-./start
+/home/container/tmp/bedrock_server
 
 clear
+rm -rf /home/container/tmp
 echo '______  ___________            '
 echo '___   |/  /_  ____/___________ '
 echo '__  /|_/ /_  /    ___/ /___/ /_'
@@ -59,6 +82,7 @@ exit
 ;;
 stop)
 clear
+rm -rf /home/container/tmp
 echo '______  ___________            '
 echo '___   |/  /_  ____/___________ '
 echo '__  /|_/ /_  /    ___/ /___/ /_'
@@ -77,21 +101,24 @@ esac
 }
 
 nook(){
-rm -rf /home/container/*
+rm -rf /home/container/tmp
     clear
     echo '______  ___________            '
     echo '___   |/  /_  ____/___________ '
     echo '__  /|_/ /_  /    ___/ /___/ /_'
     echo '_  /  / / / /___  /_  __/_  __/'
     echo '/_/  /_/  \____/   /_/   /_/  
-    开始进行安装工程'
+    开始进行部署工程'
     bnmb
-
+    mkdir /home/container/tmp
+    cd /home/container/tmp
     wget http://10.0.2.22/bedrock-server-1.20.12.01.zip
     unzip bedrock-server-1.20.12.01.zip
-    rm -rf bedrock-server-1.20.12.01.zip bedrock_server_how_to.html
-    mv bedrock_server start
-    wget -O server.properties http://10.0.2.22/bed/server.properties
+    cp -a allowlist.json ..
+    cp -a permissions.json ..
+    cp -a server.properties ..
+    cd ..
+    rm -rf tmp
     clear
     echo '______  ___________            '
     echo '___   |/  /_  ____/___________ '
@@ -100,12 +127,13 @@ rm -rf /home/container/*
     echo '/_/  /_/  \____/   /_/   /_/   '
     bnmb
     echo '==============================='
-    echo '安装完成，请重新启动！'
+    echo '部署完成，请重新启动！'
     echo '==============================='
 }
 
+
 cd /home/container/
-if [ -e "start" ]
+if [ -e "allowlist.json" ]
 then
 oks
 
