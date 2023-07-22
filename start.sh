@@ -9,6 +9,7 @@ echo '输入tools进入工具箱
 read -p "输入: " SOFTWARE </dev/tty
 
 case $SOFTWARE in
+
 tools)
 clear
 echo '______  ___________            '
@@ -18,6 +19,7 @@ echo '_  /  / / / /___  /_  __/_  __/'
 echo '/_/  /_/  \____/   /_/   /_/  
 具体还没写呢'
 ;;
+
 start)
 clear
 rm -rf /home/container/tmp
@@ -37,4 +39,8 @@ cd ..
 /home/container/tmp/bedrock_server
 
 
+;;
+
+5)
+  echo '你来的太早了'
 ;;
