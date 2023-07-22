@@ -137,10 +137,10 @@ rm -rf /home/container/tmp
 }
 
 
-
+cd /home/container/
 if [ -e "allowlist.json" ]
 then
-echo boks
+oks
 else
 
 echo bnook
