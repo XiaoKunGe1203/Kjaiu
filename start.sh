@@ -14,10 +14,17 @@ echo 'shell'
 echo '====================='
 
 read -p "输入: " JAVA_SOFTWARE </dev/tty
-$JAVA_SOFTWARE
+/bin/bash $JAVA_SOFTWARE
 
+read -p "输入: " JAVA_SOFTWAR </dev/tty
 
+case $JAVA_SOFTWAR in
+y)
 sh /tmp/open.sh
+;;
+
+esac
+
 
 
 
