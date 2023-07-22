@@ -140,9 +140,9 @@ rm -rf /home/container/tmp
 
 if [ -e "allowlist.json" ]
 then
-oks
+echo boks
 else
 
-nook
+echo bnook
 
 fi
