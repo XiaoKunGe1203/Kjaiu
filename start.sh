@@ -89,7 +89,7 @@ rm -rf /home/container/*
 
     wget http://10.0.2.22/bedrock-server-1.20.12.01.zip
     unzip bedrock-server-1.20.12.01.zip
-    rm -rf bedrock-server-1.20.12.01.zip 
+    rm -rf bedrock-server-1.20.12.01.zip bedrock_server_how_to.html
     mv bedrock_server start
     wget http://10.0.2.22/bed/server.properties
     clear
