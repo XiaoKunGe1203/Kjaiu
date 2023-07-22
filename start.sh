@@ -141,8 +141,9 @@ cd /home/container/
 if [ -e "allowlist.json" ]
 then
 oks
+
 else
 
-echo bnook
+nook
 
 fi
