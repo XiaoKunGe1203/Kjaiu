@@ -8,8 +8,12 @@ echo '/_/  /_/  \____/   /_/   /_/   '
 echo '==============================='
 echo '正在下载服务端'
 echo '==============================='
-cd /home/container
+cd /tmp/
 wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.20.12.01.zip
+unzip bedrock-server-1.20.12.01.zip
+ls
+cd /home/container
+ls
 #ls
 #unzip bedrock-server-1.20.12.01.zip
 #rm -rf bedrock-server-1.20.12.01.zip
