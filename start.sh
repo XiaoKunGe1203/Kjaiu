@@ -1,7 +1,5 @@
-if [ -e "allowlist.json" ]
-then
-    if [ -e "permissions.json" ]
-    then
+
+oks(){
     clear
 echo '______  ___________            '
 echo '___   |/  /_  ____/___________ '
@@ -106,9 +104,10 @@ exit
 ;;
 
 esac
- 
-    else
-    rm -rf /home/container/tmp
+}
+
+nook(){
+rm -rf /home/container/tmp
     clear
     echo '______  ___________            '
     echo '___   |/  /_  ____/___________ '
@@ -134,9 +133,22 @@ esac
     echo '==============================='
     echo '部署，请重新启动！'
     echo '==============================='
+}
+
+
+
+if [ -e "allowlist.json" ]
+then
+
+    if [ -e "permissions.json" ]
+    then
+    oks
+    else
+    nook
+    
     fi
 else
 
-exit
+nook
 
 fi
