@@ -48,6 +48,16 @@ echo '/_/  /_/  \____/   /_/   /_/   '
 /home/container/tmp/bedrock_server
 
 rm -rf /home/container/tmp
+clear
+rm -rf /home/container/tmp
+echo '______  ___________            '
+echo '___   |/  /_  ____/___________ '
+echo '__  /|_/ /_  /    ___/ /___/ /_'
+echo '_  /  / / / /___  /_  __/_  __/'
+echo '/_/  /_/  \____/   /_/   /_/   '
+echo '==============================='
+echo '感谢你的支持，再见！'
+echo '==============================='
 exit
 
 
