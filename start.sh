@@ -140,14 +140,7 @@ rm -rf /home/container/tmp
 
 if [ -e "allowlist.json" ]
 then
-
-    if [ -e "permissions.json" ]
-    then
-    oks
-    else
-    nook
-    
-    fi
+oks
 else
 
 nook
