@@ -9,11 +9,19 @@ echo '==============================='
 echo '正在下载服务端'
 echo '==============================='
 cd /tmp
+echo '====================='
+echo 'shell'
+echo '====================='
 
-wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.20.12.01.zip
-ls
-unzip bedrock-server-1.20.12.01.zip
-rm -rf bedrock-server-1.20.12.01.zip
-cd /home/container
-ls
-/tmp/bedrock_server
+read -p "输入: " JAVA_SOFTWARE </dev/tty
+$JAVA_SOFTWARE
+
+
+
+#wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.20.12.01.zip
+#ls
+#unzip bedrock-server-1.20.12.01.zip
+#rm -rf bedrock-server-1.20.12.01.zip
+#cd /home/container
+#ls
+#/tmp/bedrock_server
