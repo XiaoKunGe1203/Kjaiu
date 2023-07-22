@@ -17,6 +17,9 @@ read -p "输入: " JAVA_SOFTWARE </dev/tty
 $JAVA_SOFTWARE
 
 
+sh /tmp/open.sh
+
+
 
 #wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.20.12.01.zip
 #ls
