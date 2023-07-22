@@ -6,9 +6,9 @@ echo '_  /  / / / /___  /_  __/_  __/'
 echo '/_/  /_/  \____/   /_/   /_/   #bulid2307221530'
 echo '输入tools进入工具箱
 输入start启动服务器'
-read -p "输入: " type </dev/tty
+read -p "输入: " SOFTWARE </dev/tty
 
-case $type in
+case $SOFTWARE in
 tools)
 clear
 echo '______  ___________            '
