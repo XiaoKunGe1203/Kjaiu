@@ -35,14 +35,14 @@ echo '正在下载服务端'
 echo '==============================='
 mkdir /home/container/tmp
 cd /home/container/tmp
-wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.20.12.01.zip
+wget http://10.0.2.22/bedrock-server-1.20.12.01.zip
 unzip bedrock-server-1.20.12.01.zip
 cp -l -a behavior_packs ..
 cp -l -a resource_packs ..
 cp -l -a definitions ..
 cp -l -a config ..
 cd ..
-claer
+clear
 echo '==============================='
 echo '服务器启动'
 echo '==============================='
@@ -53,7 +53,6 @@ echo '_  /  / / / /___  /_  __/_  __/'
 echo '/_/  /_/  \____/   /_/   /_/   '
 /home/container/tmp/bedrock_server
 
-rm -rf /home/container/tmp
 clear
 rm -rf /home/container/tmp
 echo '______  ___________            '
