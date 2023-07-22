@@ -3,9 +3,11 @@ echo '______  ___________            '
 echo '___   |/  /_  ____/___________ '
 echo '__  /|_/ /_  /    ___/ /___/ /_'
 echo '_  /  / / / /___  /_  __/_  __/'
-echo '/_/  /_/  \____/   /_/   /_/   #bulid2307221547'
+echo '/_/  /_/  \____/   /_/   /_/   #bulid2307221810'
 echo '输入tools进入工具箱
-输入start启动服务器'
+输入start启动服务器
+[container@mcpp ~]# >'
+
 read -p "输入: " SOFTWARE </dev/tty
 
 case $SOFTWARE in
@@ -35,10 +37,10 @@ mkdir /home/container/tmp
 cd /home/container/tmp
 wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.20.12.01.zip
 unzip bedrock-server-1.20.12.01.zip
-cp -l behavior_packs ..
-cp -l resource_packs ..
-cp -l definitions ..
-cp -l config ..
+cp -l -a behavior_packs ..
+cp -l -a resource_packs ..
+cp -l -a definitions ..
+cp -l -a config ..
 cd ..
 claer
 echo '==============================='
