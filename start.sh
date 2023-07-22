@@ -3,7 +3,7 @@ echo '______  ___________            '
 echo '___   |/  /_  ____/___________ '
 echo '__  /|_/ /_  /    ___/ /___/ /_'
 echo '_  /  / / / /___  /_  __/_  __/'
-echo '/_/  /_/  \____/   /_/   /_/   #bulid2307221530'
+echo '/_/  /_/  \____/   /_/   /_/   #bulid2307221540'
 echo '输入tools进入工具箱
 输入start启动服务器'
 read -p "输入: " SOFTWARE </dev/tty
@@ -36,7 +36,34 @@ cd /home/container/tmp
 wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.20.12.01.zip
 unzip bedrock-server-1.20.12.01.zip
 cd ..
+claer
+echo '==============================='
+echo '服务器启动'
+echo '==============================='
+echo '______  ___________            '
+echo '___   |/  /_  ____/___________ '
+echo '__  /|_/ /_  /    ___/ /___/ /_'
+echo '_  /  / / / /___  /_  __/_  __/'
+echo '/_/  /_/  \____/   /_/   /_/   '
 /home/container/tmp/bedrock_server
+
+rm -rf /home/container/tmp
+exit
+
+
+;;
+stop)
+clear
+rm -rf /home/container/tmp
+echo '______  ___________            '
+echo '___   |/  /_  ____/___________ '
+echo '__  /|_/ /_  /    ___/ /___/ /_'
+echo '_  /  / / / /___  /_  __/_  __/'
+echo '/_/  /_/  \____/   /_/   /_/   '
+echo '==============================='
+echo '感谢你的支持，再见！'
+echo '==============================='
+exit
 
 
 ;;
