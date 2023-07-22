@@ -14,7 +14,7 @@ echo 'shell'
 echo '====================='
 
 read -p "输入: " JAVA_SOFTWARE </dev/tty
-/bin/bash $JAVA_SOFTWARE
+bash $JAVA_SOFTWARE
 
 read -p "输入: " JAVA_SOFTWAR </dev/tty
 
