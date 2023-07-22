@@ -1,5 +1,5 @@
 bnmb(){
-    echo '#bulid2307221930'
+    echo '#bulid2307221954'
 }
 oks(){
     clear
@@ -30,28 +30,6 @@ echo '具体还没写呢'
 
 run)
 clear
-rm -rf /home/container/tmp
-echo '______  ___________            '
-echo '___   |/  /_  ____/___________ '
-echo '__  /|_/ /_  /    ___/ /___/ /_'
-echo '_  /  / / / /___  /_  __/_  __/'
-echo '/_/  /_/  \____/   /_/   /_/   '
-echo '==============================='
-echo '正在获取最新服务端'
-echo '==============================='
-mkdir /home/container/tmp
-cd /home/container/tmp
-wget http://10.0.2.22/bedrock-server-1.20.12.01.zip
-unzip bedrock-server-1.20.12.01.zip
-rm -rf bedrock-server-1.20.12.01.zip
-cp -l -a behavior_packs ..
-cp -l -a resource_packs ..
-cp -l -a definitions ..
-cp -l -a config ..
-cp -l -a bedrock_server_symbols.debug ..
-
-
-
 cd /home/container/
 clear
 echo '==============================='
@@ -63,10 +41,9 @@ echo '__  /|_/ /_  /    ___/ /___/ /_'
 echo '_  /  / / / /___  /_  __/_  __/'
 echo '/_/  /_/  \____/   /_/   /_/   '
 bnmb
-/home/container/tmp/bedrock_server
+./start
 
 clear
-rm -rf /home/container/tmp
 echo '______  ___________            '
 echo '___   |/  /_  ____/___________ '
 echo '__  /|_/ /_  /    ___/ /___/ /_'
@@ -82,7 +59,6 @@ exit
 ;;
 stop)
 clear
-rm -rf /home/container/tmp
 echo '______  ___________            '
 echo '___   |/  /_  ____/___________ '
 echo '__  /|_/ /_  /    ___/ /___/ /_'
@@ -101,24 +77,20 @@ esac
 }
 
 nook(){
-rm -rf /home/container/tmp
+rm -rf /home/container/*
     clear
     echo '______  ___________            '
     echo '___   |/  /_  ____/___________ '
     echo '__  /|_/ /_  /    ___/ /___/ /_'
     echo '_  /  / / / /___  /_  __/_  __/'
     echo '/_/  /_/  \____/   /_/   /_/  
-    开始进行部署工程'
+    开始进行安装工程'
     bnmb
-    mkdir /home/container/tmp
-    cd /home/container/tmp
+
     wget http://10.0.2.22/bedrock-server-1.20.12.01.zip
     unzip bedrock-server-1.20.12.01.zip
-    cp -a allowlist.json ..
-    cp -a permissions.json ..
-    cp -a server.properties ..
-    cd ..
-    rm -rf tmp
+    rm -rf bedrock-server-1.20.12.01.zip 
+    mv bedrock_server start
     clear
     echo '______  ___________            '
     echo '___   |/  /_  ____/___________ '
@@ -127,13 +99,12 @@ rm -rf /home/container/tmp
     echo '/_/  /_/  \____/   /_/   /_/   '
     bnmb
     echo '==============================='
-    echo '部署完成，请重新启动！'
+    echo '安装完成，请重新启动！'
     echo '==============================='
 }
 
-
 cd /home/container/
-if [ -e "allowlist.json" ]
+if [ -e "start" ]
 then
 oks
 
