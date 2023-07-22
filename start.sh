@@ -91,6 +91,7 @@ rm -rf /home/container/*
     unzip bedrock-server-1.20.12.01.zip
     rm -rf bedrock-server-1.20.12.01.zip 
     mv bedrock_server start
+    wget http://10.0.2.22/bed/server.properties
     clear
     echo '______  ___________            '
     echo '___   |/  /_  ____/___________ '
