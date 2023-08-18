@@ -51,6 +51,7 @@ echo '服务器启动'
 echo '==============================='
 logo
 bnmb
+chmod -R 777 bedrock_server
 ./bedrock_server
 
 
