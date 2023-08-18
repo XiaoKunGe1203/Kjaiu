@@ -7,7 +7,7 @@ echo '___   |/  /_  ____/___________ '
 echo '__  /|_/ /_  /    ___/ /___/ /_'
 echo '_  /  / / / /___  /_  __/_  __/'
 echo '/_/  /_/  \____/   /_/   /_/   '
-echo'EFXNBBS赞助节点'
+echo 'EFXNBBS赞助节点'
 }
 oks(){
     clear
@@ -71,7 +71,7 @@ nook(){
     logo
     echo '开始进行部署工程'
     bnmb
-    rm -rf server.properties
+    rm -rf /home/container/server.properties
     wget https://192.168.2.5/bds1.20.13.1.zip --no-check-certificate
     unzip bds1.20.13.1.zip
     rm -rf bds1.20.13.1.zip
