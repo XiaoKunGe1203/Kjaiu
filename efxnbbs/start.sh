@@ -1,5 +1,5 @@
 bnmb(){
-    echo '#bulid2308181833'
+    echo '#bulid2308181843'
 }
 logo(){
 echo '______  ___________            '
@@ -14,7 +14,7 @@ oks(){
 logo
 bnmb
 echo '
-输入run启动服务器
+输入任意命令启动服务器
 输入tools进入工具箱
 [container@mcpp ~]# '
 
@@ -26,9 +26,23 @@ clear
 logo
 bnmb
 echo '具体还没写呢'
+exit
 ;;
 
-run)
+stop)
+clear
+rm -rf /home/container/tmp
+logo
+bnmb
+echo '==============================='
+echo '感谢你的支持，再见！'
+echo '==============================='
+exit
+
+
+;;
+
+esac
 clear
 logo
 cd /home/container/
@@ -47,23 +61,6 @@ echo '==============================='
 echo '感谢你的支持，再见！'
 echo '==============================='
 exit
-
-
-;;
-stop)
-clear
-rm -rf /home/container/tmp
-logo
-bnmb
-echo '==============================='
-echo '感谢你的支持，再见！'
-echo '==============================='
-exit
-
-
-;;
-
-esac
 }
 
 nook(){
