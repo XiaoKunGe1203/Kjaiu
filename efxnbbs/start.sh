@@ -1,5 +1,5 @@
 bnmb(){
-    echo '#bulid2308181759'
+    echo '#bulid2308181833'
 }
 logo(){
 echo '______  ___________            '
@@ -71,6 +71,7 @@ nook(){
     logo
     echo '开始进行部署工程'
     bnmb
+    rm -rf server.properties
     wget https://192.168.2.5/bds1.20.13.1.zip --no-check-certificate
     unzip bds1.20.13.1.zip
     rm -rf bds1.20.13.1.zip
