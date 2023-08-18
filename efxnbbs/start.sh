@@ -1,5 +1,5 @@
 bnmb(){
-    echo '#bulid2308181843'
+    echo '#bulid2308181850'
 }
 logo(){
 echo '______  ___________            '
@@ -51,10 +51,9 @@ echo '服务器启动'
 echo '==============================='
 logo
 bnmb
-/home/container/bedrock_server
+./bedrock_server
 
-clear
-rm -rf /home/container/tmp
+
 logo
 bnmb
 echo '==============================='
