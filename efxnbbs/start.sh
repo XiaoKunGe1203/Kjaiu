@@ -1,5 +1,5 @@
 bnmb(){
-    echo '#bulid2308181850'
+    echo '#bulid2308181855'
 }
 logo(){
 echo '______  ___________            '
