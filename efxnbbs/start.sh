@@ -51,10 +51,10 @@ echo '服务器启动'
 echo '==============================='
 logo
 bnmb
+cd /home/container/
 chmod -R 777 bedrock_server
 cd /home/container/
-ls 
-sleep 10s
+LD_LIBRARY_PATH=. ./bedrock_server
 
 
 logo
