@@ -5,10 +5,11 @@ echo '__  ,<   _____  / _  __ `/__  / _  / / /'
 echo '_  /| |  ____  /  / /_/ / _  /  / /_/ / '
 echo '/_/ |_|  ___  /   \__,_/  /_/   \__,_/  '
 echo '         /___/                          '
-echo '#bulid2311081847'
+echo '#bulid2311081849'
 }
 stoped(){
-read -p "输入任意字符以退出 " RRR </dev/tty
+echo '输入任意字符以退出'
+read -p "" RRR </dev/tty
 clear
 logo
 echo '==============================='
