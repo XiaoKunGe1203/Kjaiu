@@ -9,6 +9,7 @@ echo '#bulid2311081722'
 }
 stoped(){
 clear
+read -p "输入任意字符以退出 "
 logo
 echo '==============================='
 echo '感谢你的支持，再见！'
@@ -18,7 +19,7 @@ exit
 clear
 logo
 echo '
-输入run启动官方基岩服务器
+输入bds启动官方基岩服务器
 输入start启动Java服务器
 输入javav查看Java版本'
 
@@ -29,31 +30,37 @@ javav)
 clear
 logo
 java -version
-read -p "输入任意字符以退出 "
 ;;
 start)
-clear
-logo
-java -Xms128M -XX:MaxRAMPercentage=95.0 -jar server.jar
-read -p "输入任意字符以退出 "
-;;
-
-run)
 cd /home/container
 clear
 logo
-ehco '====================='
+java -Xms128M -XX:MaxRAMPercentage=95.0 -jar server.jar
+;;
+
+bds)
+cd /home/container
+clear
+logo
+if [ -e "bedrock_server" ]
+then
+./bedrock_server
+else
+echo '====================='
 echo '正在更新官方基岩服务器'
 echo '====================='
 echo '请等待...'   
 echo '====================='
+rm -rf /home/container/server.properties
 wget -O /home/container/bds.zip http://qxsh.tk/?go=bdsurl
 unzip /home/container/bds.zip
 rm -rf /home/container/bds.zip
 clear
 logo
-./bedrock_server
-read -p "输入任意字符以退出 "
+echo '====================='
+echo '安装完成...'   
+echo '====================='
+fi
 ;;
 esac
 stoped
