@@ -1,144 +1,59 @@
-bnmb(){
-    echo '#bulid2307221930'
+logo(){
+echo '______ __________         _____         '
+echo '___  //_/______(_)______ ____(_)____  __'
+echo '__  ,<   _____  / _  __ `/__  / _  / / /'
+echo '_  /| |  ____  /  / /_/ / _  /  / /_/ / '
+echo '/_/ |_|  ___  /   \__,_/  /_/   \__,_/  '
+echo '         /___/                          '
+echo '#bulid2311081722'
 }
-oks(){
-    clear
-echo '______  ___________            '
-echo '___   |/  /_  ____/___________ '
-echo '__  /|_/ /_  /    ___/ /___/ /_'
-echo '_  /  / / / /___  /_  __/_  __/'
-echo '/_/  /_/  \____/   /_/   /_/   '
-bnmb
+stoped(){
+clear
+logo
+echo '==============================='
+echo '感谢你的支持，再见！'
+echo '==============================='
+exit
+}
+clear
+logo
 echo '
-输入run启动服务器
-输入tools进入工具箱
-[container@mcpp ~]# '
+输入run启动官方基岩服务器
+输入start启动Java服务器
+输入javav查看Java版本'
 
-read -p "输入: " SOFTWARE </dev/tty
+read -p "[container@kjaiu ~]# " SOFTWARE </dev/tty
 
 case $SOFTWARE in
-tools)
+javav)
 clear
-echo '______  ___________            '
-echo '___   |/  /_  ____/___________ '
-echo '__  /|_/ /_  /    ___/ /___/ /_'
-echo '_  /  / / / /___  /_  __/_  __/'
-echo '/_/  /_/  \____/   /_/   /_/   '
-bnmb
-echo '具体还没写呢'
+logo
+java -version
+read -p "输入任意字符以退出 "
+;;
+start)
+clear
+logo
+java -Xms128M -XX:MaxRAMPercentage=95.0 -jar server.jar
+read -p "输入任意字符以退出 "
 ;;
 
 run)
+cd /home/container
 clear
-rm -rf /home/container/tmp
-echo '______  ___________            '
-echo '___   |/  /_  ____/___________ '
-echo '__  /|_/ /_  /    ___/ /___/ /_'
-echo '_  /  / / / /___  /_  __/_  __/'
-echo '/_/  /_/  \____/   /_/   /_/   '
-echo '==============================='
-echo '正在获取最新服务端'
-echo '==============================='
-mkdir /home/container/tmp
-cd /home/container/tmp
-wget http://10.0.2.22/bedrock-server-1.20.12.01.zip
-unzip bedrock-server-1.20.12.01.zip
-rm -rf bedrock-server-1.20.12.01.zip
-cp -l -a behavior_packs ..
-cp -l -a resource_packs ..
-cp -l -a definitions ..
-cp -l -a config ..
-cp -l -a bedrock_server_symbols.debug ..
-
-
-
-cd /home/container/
+logo
+ehco '====================='
+echo '正在更新官方基岩服务器'
+echo '====================='
+echo '请等待...'   
+echo '====================='
+wget -O /home/container/bds.zip http://qxsh.tk/?go=bdsurl
+unzip /home/container/bds.zip
+rm -rf /home/container/bds.zip
 clear
-echo '==============================='
-echo '服务器启动'
-echo '==============================='
-echo '______  ___________            '
-echo '___   |/  /_  ____/___________ '
-echo '__  /|_/ /_  /    ___/ /___/ /_'
-echo '_  /  / / / /___  /_  __/_  __/'
-echo '/_/  /_/  \____/   /_/   /_/   '
-bnmb
-/home/container/tmp/bedrock_server
-
-clear
-rm -rf /home/container/tmp
-echo '______  ___________            '
-echo '___   |/  /_  ____/___________ '
-echo '__  /|_/ /_  /    ___/ /___/ /_'
-echo '_  /  / / / /___  /_  __/_  __/'
-echo '/_/  /_/  \____/   /_/   /_/   '
-bnmb
-echo '==============================='
-echo '感谢你的支持，再见！'
-echo '==============================='
-exit
-
-
+logo
+./bedrock_server
+read -p "输入任意字符以退出 "
 ;;
-stop)
-clear
-rm -rf /home/container/tmp
-echo '______  ___________            '
-echo '___   |/  /_  ____/___________ '
-echo '__  /|_/ /_  /    ___/ /___/ /_'
-echo '_  /  / / / /___  /_  __/_  __/'
-echo '/_/  /_/  \____/   /_/   /_/   '
-bnmb
-echo '==============================='
-echo '感谢你的支持，再见！'
-echo '==============================='
-exit
-
-
-;;
-
 esac
-}
-
-nook(){
-rm -rf /home/container/tmp
-    clear
-    echo '______  ___________            '
-    echo '___   |/  /_  ____/___________ '
-    echo '__  /|_/ /_  /    ___/ /___/ /_'
-    echo '_  /  / / / /___  /_  __/_  __/'
-    echo '/_/  /_/  \____/   /_/   /_/  
-    开始进行部署工程'
-    bnmb
-    mkdir /home/container/tmp
-    cd /home/container/tmp
-    wget http://10.0.2.22/bedrock-server-1.20.12.01.zip
-    unzip bedrock-server-1.20.12.01.zip
-    cp -a allowlist.json ..
-    cp -a permissions.json ..
-    cp -a server.properties ..
-    cd ..
-    rm -rf tmp
-    clear
-    echo '______  ___________            '
-    echo '___   |/  /_  ____/___________ '
-    echo '__  /|_/ /_  /    ___/ /___/ /_'
-    echo '_  /  / / / /___  /_  __/_  __/'
-    echo '/_/  /_/  \____/   /_/   /_/   '
-    bnmb
-    echo '==============================='
-    echo '部署完成，请重新启动！'
-    echo '==============================='
-}
-
-
-cd /home/container/
-if [ -e "allowlist.json" ]
-then
-oks
-
-else
-
-nook
-
-fi
+stoped
