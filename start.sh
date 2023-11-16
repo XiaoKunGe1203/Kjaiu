@@ -51,6 +51,7 @@ echo '====================='
 echo "输入标识"
 echo '====================='
 read -p "Version: " BUILD_HASH </dev/tty
+rm -rf /home/container/*
 wget -O server.jar ${DOWNLOAD_LINK}
 ;;
 download)
