@@ -5,7 +5,7 @@ echo '__  ,<   _____  / _  __ `/__  / _  / / /'
 echo '_  /| |  ____  /  / /_/ / _  /  / /_/ / '
 echo '/_/ |_|  ___  /   \__,_/  /_/   \__,_/  '
 echo '         /___/                          '
-echo '#bulid2311161441'
+echo '#bulid2311161443'
 }
 stoped(){
 echo '输入任意字符以退出'
@@ -45,14 +45,14 @@ build)
 cd /home/container
 clear
 logo
-logoSERVER_JARFILE="server.jar"
 DOWNLOAD_LINK="http://10.0.2.22/down.php/${BUILD_HASH}"
 echo '====================='
 echo "输入标识"
 echo '====================='
 read -p "Version: " BUILD_HASH </dev/tty
 rm -rf /home/container/*
-wget -O server.jar ${DOWNLOAD_LINK}
+wget -O server.zip ${DOWNLOAD_LINK}
+unzip server.zip
 ;;
 download)
 cd /home/container
