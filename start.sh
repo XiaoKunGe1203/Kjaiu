@@ -5,7 +5,7 @@ echo '__  ,<   _____  / _  __ `/__  / _  / / /'
 echo '_  /| |  ____  /  / /_/ / _  /  / /_/ / '
 echo '/_/ |_|  ___  /   \__,_/  /_/   \__,_/  '
 echo '         /___/                          '
-echo '#bulid2311161426'
+echo '#bulid2311161427'
 }
 stoped(){
 echo '输入任意字符以退出'
@@ -50,7 +50,7 @@ DOWNLOAD_LINK="http://10.0.2.22/down.php/${BUILD_HASH}"
 echo "输入标识"
 read -p "Version: " BUILD_HASH </dev/tty
 
-curl -o server.jar -sS ${DOWNLOAD_LINK}
+curl -o server.jar ${DOWNLOAD_LINK}
 ;;
 download)
 cd /home/container
@@ -61,7 +61,7 @@ DOWNLOAD_LINK="${MC_VERSION}"
 echo "输入你的下载链接"
 read -p "下载链接: " DOWNLOAD_LINK </dev/tty
 
-curl -o server.jar -sS ${DOWNLOAD_LINK}
+curl -o server.jar ${DOWNLOAD_LINK}
 ;;
 install)
 cd /home/container
