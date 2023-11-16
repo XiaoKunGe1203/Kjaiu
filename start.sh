@@ -44,13 +44,14 @@ java -Xms128M -XX:MaxRAMPercentage=95.0 -jar server.jar
 build)
 cd /home/container
 clear
+logo
 logoSERVER_JARFILE="server.jar"
 DOWNLOAD_LINK="http://10.0.2.22/down.php/${BUILD_HASH}"
-
+echo '====================='
 echo "输入标识"
+echo '====================='
 read -p "Version: " BUILD_HASH </dev/tty
-
-curl -o server.jar ${DOWNLOAD_LINK}
+wget -O server.jar ${DOWNLOAD_LINK}
 ;;
 download)
 cd /home/container
@@ -58,10 +59,11 @@ clear
 logo
 SERVER_JARFILE="server.jar"
 DOWNLOAD_LINK="${MC_VERSION}"
+echo '====================='
 echo "输入你的下载链接"
+echo '====================='
 read -p "下载链接: " DOWNLOAD_LINK </dev/tty
-
-curl -o server.jar ${DOWNLOAD_LINK}
+wget -O server.jar ${DOWNLOAD_LINK}
 ;;
 install)
 cd /home/container
