@@ -41,6 +41,25 @@ clear
 logo
 java -Xms128M -XX:MaxRAMPercentage=95.0 -jar server.jar
 ;;
+install)
+cd /home/container
+clear
+logo
+echo '====================='
+echo '正在更新官方基岩服务器'
+echo '====================='
+echo '请等待...'   
+echo '====================='
+rm -rf /home/container/server.properties
+wget -O /home/container/bds.zip http://qxsh.tk/?go=bdsurl
+unzip /home/container/bds.zip
+rm -rf /home/container/bds.zip
+clear
+logo
+echo '====================='
+echo '安装完成...'   
+echo '====================='
+;;
 
 bds)
 cd /home/container
