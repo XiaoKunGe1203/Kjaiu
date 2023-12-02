@@ -3,6 +3,6 @@ echo '============================'
 echo '请等待'
 echo '============================'
 cd /tmp
-wget -O /tmp/open.sh https://gh-proxy.com/https://raw.githubusercontent.com/XiaoKunGe1203/Kjaiu/main/start.sh --no-check-certificate
+wget -O /tmp/open.sh http://localnet.fhmc.tk/kjaiush/start.sh --no-check-certificate
 sh /tmp/open.sh
 exit
